@@ -1,0 +1,172 @@
+
+.banner{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "PingFang SC";
+    background: #fff;
+    flex-wrap:nowrap;   
+}
+
+.wrapper{
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    max-height: 100vh;
+    z-index: 9;
+    margin: 0 auto 0 150px;
+}
+
+.wrapper .wrapperTitle{
+    font-weight: 500;
+    color: #2c609e;
+    font-size: 54px;
+    line-height: 54px;
+    margin-bottom: 16px;
+}
+
+.wrapper .wrapperTitle div{
+    color: #2268bd;
+}
+
+.wrapper .wrapperText{
+    font-weight: 400;
+    color: #2d73c9;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 16px;
+}
+
+.wrapper .wrapperButton{
+    height: 40px;
+    border-radius: 20px;
+    padding: 0 24px;
+    background-color: #1877ff;
+    cursor: pointer;
+    font-weight: 400;
+    color: #fff;
+    font-size: 14px;
+    line-height: 40px;
+    display: inline-block;
+}
+
+.wrapperButton:hover{
+    background-color: #0061ed;
+    border: 1px solid #0061ed;
+    transition: all .2s ease-in-out;
+}
+
+.wrapperButton .icon{
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill:currentColor;
+    overflow: hidden;
+}
+
+.logoList{
+    margin-top: 66px;
+    display: flex;
+    align-items: center;
+}
+
+
+.logoList .logo1,.logo2,.logo3,.logo4{
+    position:relative;
+    margin-right: 52px;
+}
+
+.logo1 img,.logo2 img,.logo3 img,.logo4 img{
+    height:40px;
+    width:auto;
+}
+
+
+.logoList > .logo1::after, .logo2::after, .logo3::after{
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: -26px;
+    width: 1px;
+    height: 24px;
+    background-color: #1977fe;
+}
+
+.banner .container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(8.99rem + 60px);
+    min-height: 100vh;
+    z-index: 1;
+    background-image: url(imgs/banner_bg.jpg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.circle{
+    position: absolute;
+    z-index: 99;
+    top: 20%;
+    height: auto;
+    width: 320px;
+    right: -200px;
+    animation: slide 8s linear 0s infinite alternate;
+}
+
+.banner img{
+    vertical-align: middle;
+}
+
+@keyframes slide{
+    0%{
+        top:21%;
+        right:-210px;
+    }
+    25%{
+        top:20%;
+        right:-200px;
+    }
+    50%{
+        top:19%;
+        right:-210px;
+    }
+    100%{
+        top:21%;
+        right:-200px;
+    }
+}
+.banner .next{
+    position:absolute;
+    bottom:70px;
+    left:50%;
+    cursor:pointer;
+    transform:translateX(-50%);
+    z-index: 11;
+}
+.banner .next .icon{
+    width: 1.4em;
+    height: 1.4em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.banner .next svg{
+    animation:arrow_animate .6s infinite alternate;
+}
+
+@keyframes arrow_animate{
+    0% {
+        transform:translateY(0);
+    }
+
+    100% {
+        transform:translateY(20px);
+    }
+}

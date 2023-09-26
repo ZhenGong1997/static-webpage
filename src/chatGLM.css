@@ -1,0 +1,347 @@
+.chatGLM{
+    width: 100%;
+    padding-top: 90px;
+    margin-bottom: 70px;
+}
+
+.chatGLM .wrapper{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.chatGLM div{
+    color:#333;
+}
+
+.chatGLM .wrapper .top{
+    text-align: center;
+}
+
+.title{
+    font-family: "Roboto";
+    font-weight: 400;
+    color: #131212;
+    font-size: 45px;
+    line-height: 56px;
+}
+
+.desc{
+    font-family: "PingFang SC";
+    font-weight: 300;
+    color: #5e5e65;
+    font-size: 15px;
+    line-height: 19px;
+    margin-top: 16px;
+    letter-spacing: -.28px;
+}
+
+.wrapper .box{
+    display: flex;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 430px;
+    margin-top: 48px;
+    background: linear-gradient(0deg,hsla(0,0%,100%,.2),hsla(0,0%,100%,.2)),linear-gradient(1turn,#e3ecff,#f8faff 91.03%);
+    border-radius: 12px;
+}
+
+.wrapper .box .left{
+    flex: 1 1;
+    margin-right: 49px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 60px;
+    visibility: visible;
+    animation-duration: 1s;
+    animation-name: fadeIn;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity:0;
+    }
+
+    100%{
+        opacity:1;
+    }
+}
+
+.left .image img{
+    height:45px;
+}
+
+.left .title{
+    font-family: "Roboto";
+    font-weight: 500;
+    color: #131212;
+    font-size: 28px;
+    line-height: 44px;
+    margin-top: 10px;
+}
+
+.left .desc{
+    font-family: "Open Sans";
+    font-weight: 400;
+    color: rgba(10,10,10,.8);
+    font-size: 16px;
+    line-height: 28px;
+    margin-top: 12px;
+}
+
+.left .link{
+    display: flex;
+    margin-top: 24px;
+
+}
+
+.left .link .btn1{
+    height: 36px;
+    border-radius: 18px;
+    font-size: 13px;
+    line-height: 36px;
+    padding: 0 24px;
+    margin-right: 20px;
+    background-color: #1679ff;
+    color: #fff;
+    transition: all .1s ease-in-out;
+}
+
+.left .link .btn1:hover{
+    background-color: #0061ed;
+}
+
+.chatGLM .box .right{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background: url(imgs/chatGLM-right-bg.svg) 0 100% no-repeat;
+    background-size: 100% 100%;
+    animation-name:slideInRight;
+}
+
+@keyframes slideInRight{
+    0% {
+        opacity: 0;
+        transform: translateX(2000px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.right .rightBlock{
+    flex: 1 1;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 339px;
+    margin: 60px 95px;
+    border-radius: 10px;
+    background: linear-gradient(180deg,#fff,#f3f7f9);
+    box-shadow: 0 20px 28px 0 rgba(157,164,177,.06);
+    border: 1px solid #dbe0e8;
+    overflow: hidden;
+}
+
+.right .rightHeader{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 26px;
+    padding-left: 10px;
+    background: linear-gradient(90deg,#1977fe,#d3e5ff);
+}
+
+.right .rightHeader .dot{
+    width: 7px;
+    height: 7px;
+    margin-right: 6px;
+    background: #dadada;
+    border-radius: 50%;
+}
+
+.right .rightBottom{
+    position: relative;
+    padding: 25px 40px;
+}
+
+.rightBottom .question, .answer{
+    display:flex;
+}
+
+.question .q_image, .answer .a_image{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    min-width: 21px;
+    height: 21px;
+    margin-right: 18px;
+    font-size: 12px;
+    border-radius: 3px;
+    line-height: 21px;
+    color: #fff;
+    background: #64b7af;
+}
+
+.answer{
+    margin-top: 18px;
+}
+.answer .a_image{
+    background:#fff;
+}
+
+.icon{
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.question .q_text, .answer .a_text{
+    font-size: 12px;
+    line-height: 20px;
+    color: #5e5e66;
+}
+
+.answer .a_text p{
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+.answer .a_text p .lineBlink{
+    display: inline-block;
+    width: 8px;
+    height: 12px;
+    border-right: 5px solid #666;
+    animation: showInfinite .5s infinite both;
+    animation-delay: .3s;
+    vertical-align: middle;
+}
+
+@keyframes  showInfinite{
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.rightBottom .thumbs{
+    display: flex;
+    justify-content: end;
+    font-size: 15px;
+    /* opacity: 1; */
+    transition: all .2s ease-in;
+}
+
+.thumbs .up{
+    color: #1977fe;
+    margin-right: 18px;
+}
+
+.thumbs .down{
+    color:#c7c7c7;
+}
+
+.wrapper .list{
+    width: 100%;
+    display: flex;
+    height: 260px;
+    margin-top: 24px;
+}
+
+.item1,.item2,.item3{
+    position: relative;
+    width: 384px;
+    height: 240px;
+    margin-right: 24px;
+    padding: 0 30px;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+    background-size: cover;
+}
+
+.item1{
+    background: url(imgs/1.png) no-repeat;
+}
+.item2{
+    background: url(imgs/2.png) no-repeat;
+}
+.item3{
+    background: url(imgs/3.png) no-repeat;
+}
+
+.item1 .logo,.item2 .logo,.item3 .logo{
+    position: absolute;
+    height: 48px;
+    top: 15px;
+    opacity: 1;
+    transition: opacity .4s cubic-bezier(.87,0,.13,1);
+    margin-bottom: 21px;
+}
+
+.item1 .logo>img,.item2 .logo>img, .item3 .logo>img{
+    height:100%;
+    vertical-align: middle;
+    border-style: none;
+}
+
+.chatGLM .card{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 80px;
+    padding: 0 30px;
+    transition: all .4s cubic-bezier(.87,0,.13,1);
+}
+
+.chatGLM .cardTitle{
+    font-family: "PingFang SC";
+    font-weight: 500;
+    color: #131212;
+    font-size: 28px;
+    line-height: 40px;
+}
+
+.chatGLM .cardDesc{
+    margin-top: 5px;
+    font-family: "PingFang SC";
+    font-weight: 400;
+    color: #5e5e66;
+    font-size: 16px;
+    line-height: 22px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.chatGLM .cardLink{
+    width: fit-content;
+    cursor: pointer;
+    font-size: 22px;
+    margin-top: 23px;
+    /* color: #506c8e; */
+}
+
+.chatGLM .cardLink .icon{
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: -0.15em;
+    fill:#506c8e;
+    overflow: hidden;
+}
+

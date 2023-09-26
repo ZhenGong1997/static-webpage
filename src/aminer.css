@@ -1,0 +1,160 @@
+.aminer{
+    width: 100%;
+    padding-top: 90px;
+    margin: 0 auto 70px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.aminer .top{
+    text-align: center;
+}
+
+.aminer .dataList{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    height: 140px;
+    margin: 90px auto 78px;
+    border-radius: 8px;
+    background: #f9fbff;
+}
+
+.dataList .data{
+    width:200px;
+    height:80px;
+    border-right: 0.5px solid hsla(0,0%,59.2%,.5);
+    text-align: center;
+}
+.dataList .data:first-child{
+    width:182px;
+}
+.dataList .data:last-child{
+    border-right: none;
+}
+
+.aminer .cardList{
+    display: flex;
+    width: 1200px;
+    height: 394px;
+    margin: 0 auto;
+}
+
+
+
+.dataList .data .num{
+    height: 42px;
+    line-height: 42px;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.dataList .data .desc{
+    line-height: 25px;
+    font-size: 18px;
+    margin-top: 16px;
+    font-weight: 600;
+    color: #9da4b1;
+}
+
+.aminer .cardList {
+    display: flex;
+    width: 1200px;
+    height: 394px;
+    margin: 0 auto;
+}
+
+.cardList .card{
+    position: relative;
+    border-radius: 12px;
+    margin-right: 40px;
+    height: 389px;
+    width: 270px;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+}   
+
+.cardList .card:last-child{
+    margin-right: 0;
+}
+
+.cardList .card .icon{
+    position: absolute;
+    width: 100%;
+    height: 200px;
+}
+
+.cardList .card .icon img:first-child{
+    position: absolute;
+    z-index: 1;
+    object-fit: cover;
+    width: 40px;
+    top: 24px;
+    left: 24px;
+}
+
+.cardList .card .icon img:last-child{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    vertical-align: middle;
+    border-style: none;
+}
+
+.cardList .card .bottom{
+    width: 100%;
+    height:185px;
+    position: absolute;
+    top: 200px;
+    /* height: fit-content; */
+    border-radius: 0 0 12px 12px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    padding: 14px 24px;
+}
+
+.card .bottom .title{
+    line-height: 40px;
+    font-size: 28px;
+    font-weight: 500;
+    
+}
+
+.card .bottom .desc{
+    height: 48px;
+    line-height: 24px;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.card .bottom .image{
+    width: fit-content;
+    font-size: 27px;
+    position: relative;
+    /* z-index: 11; */
+    cursor: pointer;
+    color: #1977fe;
+}
+
+.bottom .image .icon{
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: -0.15em;
+    fill: #1977fe;
+    overflow: hidden;
+}

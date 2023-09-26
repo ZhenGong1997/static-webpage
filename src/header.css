@@ -1,0 +1,160 @@
+.header_show {
+    transform: translateY(0); /* 显示header */
+  }
+  
+.header_hide {
+transform: translateY(-100%); /* 隐藏header */
+}
+
+.headerNav{
+    display:flex;
+    font-size: 16px;
+    font-weight: 400;
+    font-stretch: normal;
+    letter-spacing: 1px;
+    position:fixed;
+    top:0;
+    width:100%;
+    height:84px;
+    z-index:9999;
+    transition: transform 0.8s ease;
+}
+
+.headerNav > .nav{
+    width:100%;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    line-height: 84px;
+    padding-left:50px;
+    padding-right: 50px;
+    z-index: 11;
+}
+.navLeft{
+    display:flex;
+    color:#3d5e93;
+    
+}
+.navLeft .logo {
+    display:flex;
+    align-items: center;
+}
+.navLeft .logo >img{
+    width:110px;
+    margin-right: 50px;
+    cursor:pointer;
+}
+
+.navLeft > .navList{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.navLeft > .navList #productModule, #news{
+    margin-right: 50px;
+}
+
+#productModule, #news, #aboutus{
+    position:relative;
+}
+
+#productModule:hover, #news:hover, #aboutus:hover{
+    font-weight: 500;
+    
+}
+
+#productModule::after, #news::after, #aboutus::after{
+    position:absolute;
+    display:inline-block;
+    content:"";
+    /* 中间向两边过渡 */
+    left:50%;
+    bottom:0;
+    height:4px;
+    width:0;
+    background-color: rgba(22,121,255,.3);
+    overflow: hidden;
+    transform-origin: center; 
+    transition: width .3s ease-out, left .3s ease-out;
+}
+
+
+
+#productModule:hover::after, #news:hover::after, #aboutus:hover::after{
+    width:100%;
+    left:0;
+}
+
+.navRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navRight .language{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color:rgba(44, 96, 158, 0.6);
+    align-items: center;
+    margin:0 24px;
+    cursor:pointer;
+    font-family: "PingFang SC";
+
+}
+.navRight .language  .han:hover, .en:hover{
+    color:rgba(44, 96, 158, 1);
+    transition: all .3s ease-in-out;
+
+}
+
+.navRight .language .divider{
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+
+
+.consultButton {
+    position: relative;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: rgba(25, 119, 254, 0.9);
+    border-radius: 50px;
+  }
+  
+  .consultButton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(25, 119, 254, 0.9);
+    border-radius: 50px;
+    opacity: 0.9;
+    z-index: -1;
+  }
+  
+  .textContainer {
+    position: relative;
+    z-index: 1;
+  }
+   
+
+.navRight .consultButton:hover{
+    background:#0061ed;
+}
+
+
+
+/* transition: border-color .3s,background .3s,padding .3s cubic-bezier(.645,.045,.355,1) */
