@@ -46,7 +46,7 @@
 
 
 /* 有趣的设定 */
-.digital .menu .after
+.digital .list .menus .menu .after
 {
     content: "";
     position: absolute;
@@ -58,7 +58,6 @@
     border-left: 8px solid #4d8af7;
     border-top: 8px solid #fff;
     border-bottom: 8px solid #fff;
-    display:none;
 }
 
 .digital .activeItem{
@@ -66,14 +65,13 @@
     display: flex;
     padding: 64px 40px;
     height: 100%;
-    display:none;
 }
 
-.digital .textBlock{
+.digital .activeItem .textBlock{
     flex: 1 1;
 }
 
-.digital .videoBlock{
+.digital .activeItem .videoBlock{
     width: 360px;
     height: 410px;
     margin-left: 40px;
@@ -82,7 +80,7 @@
     border-radius: 12px;
 }
 
-.digital .videoBlock video{
+.digital .activeItem .videoBlock video{
     width: 360px;
     opacity: 1;
     object-fit: cover;
@@ -91,7 +89,7 @@
     border-radius: 12px;
 }
 
-.digital .textBlockTitle{
+.digital .activeItem .textBlock .textBlockTitle{
     font-family: "Roboto";
     font-weight: 400;
     color: #0a0a0a;
@@ -99,7 +97,7 @@
     line-height: 44px;
 }
 
-.digital .textBlockDesc{
+.digital .activeItem .textBlock .textBlockDesc{
     font-family: "Open Sans";
     font-weight: 400;
     color: #5e5e66;
@@ -109,7 +107,7 @@
     margin-bottom: 45px;
 }
 
-.digital .activeItem .btn{
+.digital .activeItem .textBlock .btn{
     font-size: 16px;
     line-height: 23px;
     cursor: pointer;

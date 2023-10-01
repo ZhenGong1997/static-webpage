@@ -1,0 +1,114 @@
+.product{
+    width: 1200px;
+    margin:0 auto;
+    padding-top: 90px;
+    padding-bottom: 66px;
+    background-image: url(imgs/product_bg.png);
+    background-size: cover;
+}
+
+.product .top {
+    text-align: center;
+}
+
+.product div{
+    color:#333;
+}
+
+.product .wrapper{
+    width: 100%;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.product .wrapper .menus{
+    display: flex;
+    justify-content: center;
+    margin-top: 76px;
+    margin-bottom: 48px;
+}
+
+.product .wrapper .menus .menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0 20px;
+    border-radius: 40px;
+    font-size: 18px;
+    margin-right: 18px;
+    height: 46px;
+    background: transparent;
+    font-weight: 500;
+    border: 1px solid transparent;
+    transition: all .2s ease-in-out;
+}
+
+.product .wrapper .menus .menu:hover{
+    color: #fff;
+    border: 1px solid #f7f9fe;
+    box-shadow: 0 3px 8px rgba(239,242,255,.9);
+    background: linear-gradient(180deg,#1977fe,#559bff);
+}
+.product .wrapper .menus .menu img{
+    width: 20px;
+    margin-right: 7px;
+}
+
+.product .wrapper .block{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product .wrapper .block .blockItem{
+    width: 384px;
+    height: 210px;
+    margin-right: 24px;
+    margin-bottom: 24px;
+    cursor: pointer;
+    transition: all .2s linear;
+}   
+
+.product .wrapper .block .blockItem:hover{
+    transform: translateY(-20px);
+}
+
+.product .wrapper .block .blockItem:nth-child(3n){
+    margin-right: 0;
+}
+
+.product .wrapper .block .blockItem .item{
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 10px 28px 0 rgba(46,63,89,.06);
+    background-color: #fff;
+    transition: all .2s linear;
+    border-radius: 12px;
+}
+
+.product .wrapper .block .blockItem .logo{
+    height: 50px;
+    text-align: center;
+}
+
+.product .wrapper .block .blockItem .title{
+    height: 26px;
+    line-height: 26px;
+    font-size: 18px;
+    margin-top: 14px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.product .wrapper .block .blockItem .desc{
+    font-family: "PingFang SC";
+    font-weight: 400;
+    color: rgba(10,10,10,.5);
+    font-size: 12px;
+    line-height: 20px;
+}
