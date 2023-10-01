@@ -1,0 +1,124 @@
+.digital{
+    height: fit-content;
+    margin: 0 auto;
+    width: 1200px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+.digital .top{
+    text-align: center;
+}
+
+.digital .list{
+    width: 100%;
+    height: 548px;
+    border-radius: 20px;
+    display: flex;
+    background: #f9fbff;
+    margin-top: 60px;
+    overflow: hidden;
+}
+
+.digital .list .menus{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    background: rgba(228,234,252,.5);
+    border-right: 5px solid #fff;
+}
+
+.digital .menus .menu{
+    position:relative;
+    width: 215px;
+    height: 137px;
+    line-height: 137px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #51565d;
+    cursor: pointer;
+    text-align: center;
+    transition: all .2s ease-in-out;
+    border-bottom: 1px solid #fff;
+    background: linear-gradient(90deg,#eef4ff 4.15%,#f8faff);
+}
+
+
+.digital .menu:hover{
+    color: #fff;
+    background: linear-gradient(180deg,#1977fe,#559bff);
+}
+
+/* 有趣的设定 */
+.digital .menu:hover::before
+{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 8px solid #4d8af7;
+    border-top: 8px solid #fff;
+    border-bottom: 8px solid #fff;
+}
+
+.digital .activeItem{
+    flex: 1 1;
+    display: flex;
+    padding: 64px 40px;
+    height: 100%;
+    display:none;
+}
+
+.digital .textBlock{
+    flex: 1 1;
+}
+
+.digital .videoBlock{
+    width: 360px;
+    height: 410px;
+    margin-left: 40px;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.digital .videoBlock video{
+    width: 360px;
+    opacity: 1;
+    object-fit: cover;
+    height: 100%;
+    transition: all .2s ease-in-out;
+    border-radius: 12px;
+}
+
+.digital .textBlockTitle{
+    font-family: "Roboto";
+    font-weight: 400;
+    color: #0a0a0a;
+    font-size: 28px;
+    line-height: 44px;
+}
+
+.digital .textBlockDesc{
+    font-family: "Open Sans";
+    font-weight: 400;
+    color: #5e5e66;
+    font-size: 18px;
+    line-height: 36px;
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+
+.digital .activeItem .btn{
+    font-size: 16px;
+    line-height: 23px;
+    cursor: pointer;
+    color: #1977fe;
+    font-weight: 400;
+    transition: all .1s ease-in-out;
+}
+

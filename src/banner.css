@@ -11,7 +11,7 @@
     flex-wrap:nowrap;   
 }
 
-.wrapper{
+.banner .wrapper{
     position: relative;
     width: 100%;
     max-width: 1200px;
@@ -20,7 +20,7 @@
     margin: 0 auto 0 150px;
 }
 
-.wrapper .wrapperTitle{
+.banner .wrapper .wrapperTitle{
     font-weight: 500;
     color: #2c609e;
     font-size: 54px;
@@ -28,11 +28,11 @@
     margin-bottom: 16px;
 }
 
-.wrapper .wrapperTitle div{
+.banner .wrapper .wrapperTitle div{
     color: #2268bd;
 }
 
-.wrapper .wrapperText{
+.banner .wrapper .wrapperText{
     font-weight: 400;
     color: #2d73c9;
     font-size: 24px;
@@ -40,7 +40,7 @@
     margin-bottom: 16px;
 }
 
-.wrapper .wrapperButton{
+.banner .wrapper .wrapperButton{
     height: 40px;
     border-radius: 20px;
     padding: 0 24px;
@@ -53,13 +53,13 @@
     display: inline-block;
 }
 
-.wrapperButton:hover{
+.banner .wrapperButton:hover{
     background-color: #0061ed;
     border: 1px solid #0061ed;
     transition: all .2s ease-in-out;
 }
 
-.wrapperButton .icon{
+.banner .wrapperButton .icon{
     width: 1em;
     height: 1em;
     vertical-align: -0.15em;
