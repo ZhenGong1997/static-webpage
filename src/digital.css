@@ -45,13 +45,8 @@
 }
 
 
-.digital .menu:hover{
-    color: #fff;
-    background: linear-gradient(180deg,#1977fe,#559bff);
-}
-
 /* 有趣的设定 */
-.digital .menu:hover::before
+.digital .menu .after
 {
     content: "";
     position: absolute;
@@ -63,6 +58,7 @@
     border-left: 8px solid #4d8af7;
     border-top: 8px solid #fff;
     border-bottom: 8px solid #fff;
+    display:none;
 }
 
 .digital .activeItem{

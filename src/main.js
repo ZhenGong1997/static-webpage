@@ -40,19 +40,33 @@ activeItems.forEach((item,index)=>{
   }
 });
 
-// menus.forEach((item,index)=>{
-//   if(index!==0){
-//     item.style.color = '#51565d';
-//     item.style.background ='linear-gradient(90deg,#eef4ff 4.15%,#f8faff)';
-//   } else {
-//     item.style.color = '#fff';
-//     item.style.background ='linear-gradient(180deg,#1977fe,#559bff)';
-//   }
-// });
+const afters = document.querySelectorAll('.menu .after')
+console.log(afters)
+menus[0].style.color = '#fff';
+menus[0].style.background ='linear-gradient(180deg,#1977fe,#559bff)';
+afters[0].style.display = 'block';
 
 menus.forEach((menu, index) => {
   menu.addEventListener('mouseover', ()=>{
-
+    menus.forEach((menu1, index1)=> {
+      if(index !== index1){
+        menu1.style.color = '#51565d';
+        menu1.style.background ='linear-gradient(90deg,#eef4ff 4.15%,#f8faff)';
+      } else {
+        menu1.style.color = '#fff';
+        menu1.style.background = 'linear-gradient(180deg,#1977fe,#559bff)';
+      }
+    })
+    afters.forEach((item, index2) => {
+      if(index !== index2){
+        item.style.display = 'none';
+      } else {
+        item.style.display = 'block';
+      }
+    })
+      
+    
+    // 重置activeItems display
     activeItems.forEach(item=>{
       item.style.display = 'none';
     });
@@ -60,9 +74,6 @@ menus.forEach((menu, index) => {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  
-  menus[0].classList.add('digitalMenuActive'); // 添加 hover 样式类
-});
+
 
 
