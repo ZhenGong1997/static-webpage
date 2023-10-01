@@ -40,14 +40,15 @@ activeItems.forEach((item,index)=>{
   }
 });
 
+// digital menu样式初始化
 const afters = document.querySelectorAll('.menu .after')
-console.log(afters)
 menus[0].style.color = '#fff';
 menus[0].style.background ='linear-gradient(180deg,#1977fe,#559bff)';
 afters[0].style.display = 'block';
 
 menus.forEach((menu, index) => {
-  menu.addEventListener('mouseover', ()=>{
+  menu.addEventListener('mouseenter', ()=>{
+    // 鼠标进入时判断menus和afters中元素应该选择的样式
     menus.forEach((menu1, index1)=> {
       if(index !== index1){
         menu1.style.color = '#51565d';
