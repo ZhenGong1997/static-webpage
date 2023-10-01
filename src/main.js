@@ -1,42 +1,48 @@
-function moveUpShowHeader(){
-
+function initHeader(){
+  moveUpShowHeader();
+  // Header turns white when exceeds scrolling down 80px
+  headerTurnWhite();
 }
 
-// 只要上移动，就显示header
-let prevScrollPos = window.pageYOffset;
-window.addEventListener('scroll', function() {
-  let currentScrollPos = window.pageYOffset;
-  let header = document.querySelector('.headerNav');
+function moveUpShowHeader(){
+  let prevScrollPos = window.pageYOffset;
+  window.addEventListener('scroll', () => {
+    let currentScrollPos = window.pageYOffset;
+    let header = document.querySelector('.headerNav');
 
-  if (prevScrollPos > currentScrollPos) {
-    header.classList.add('header_show');
-    header.classList.remove('header_hide');
-  } else {
-    header.classList.remove('header_show');
-    header.classList.add('header_hide');
-  }
-  prevScrollPos = currentScrollPos;
-});
+    if (prevScrollPos > currentScrollPos) {
+      header.classList.add('header_show');
+      header.classList.remove('header_hide');
+    } else {
+      header.classList.remove('header_show');
+      header.classList.add('header_hide');
+    }
+    prevScrollPos = currentScrollPos;
+  });
+}
 
-// 移动超过80像素，header背景变白
-window.addEventListener('scroll', function() {
-  let header = document.querySelector('.headerNav');
-  let distance = window.pageYOffset || document.documentElement.scrollTop;
+function headerTurnWhite(){
+  window.addEventListener('scroll', function() {
+    let header = document.querySelector('.headerNav');
+    let distance = window.pageYOffset || document.documentElement.scrollTop;
+  
+    if (distance > 80) {
+      header.style.backgroundColor = '#fff';
+      header.style.transition = "all 0.2s ease-in-out"; 
+    } else {
+      header.style.backgroundColor = 'transparent';
+      header.style.transition = "all 0.2s ease-in-out"; 
+    }
+  });
+}
 
-  if (distance > 80) {
-    header.style.backgroundColor = '#fff';
-    header.style.transition = "all 0.2s ease-in-out"; 
-  } else {
-    header.style.backgroundColor = 'transparent';
-    header.style.transition = "all 0.2s ease-in-out"; 
-  }
-});
+
 
 
 /* Digital Block Logic */
 // ------------------------------------------------------------------------
 function initDigitalSection(){
-  const menus = document.querySelectorAll('.digital .menus div');
+  const menus = document.querySelectorAll('.digital .menus .menu');
   const items = document.querySelectorAll('.digital .activeItem');
   const afters = document.querySelectorAll('.menu .after');
   initDigitalMenu(menus, afters);
@@ -152,7 +158,7 @@ function listenProductSection(productMenus, productBlocks){
 }
 // ------------------------------------------------------------------------
 
-
+initHeader();
 initDigitalSection();
 initProductSection();
 
