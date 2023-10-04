@@ -90,6 +90,10 @@
     line-height: 16px;
 }
 
+.footerBox .productListItem a:hover{
+    color: #0061ed;
+}
+
 .footerBox .productListItem a img{
     display: none;
     position: absolute;

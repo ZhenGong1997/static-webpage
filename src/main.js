@@ -1,17 +1,23 @@
-function initHeader(){
-  moveUpShowHeader();
-  // Header turns white when exceeds scrolling down 80px
-  headerTurnWhite();
 
+/* Header Block Logic */
+// ------------------------------------------------------------------------
+function initHeader(){
+  header_scroll_logic();
+  // Header turns white when exceeds scrolling down 80px
+  header_color_logic();
+  product_page_logic();
+  load_header_state();
+  header_qr_logic();
+  
+}
+
+function header_qr_logic(){
   const textLink1 = document.querySelector('.pc-product-page #product_youshi');
   const textLink2 = document.querySelector('.pc-product-page #product_shouyucidian');
   const qrImg1 = document.querySelector('.pc-product-page #product_youshi_qr');
   const qrImg2 = document.querySelector('.pc-product-page #product_shouyucidian_qr');
   listen_qrHover(textLink1, qrImg1);
   listen_qrHover(textLink2, qrImg2);
-
-  show_product_page();
-  load_header_state();
 }
 
 function hide_product_page(){
@@ -32,7 +38,7 @@ function load_header_state(){
   })
 }
 
-function show_product_page(){
+function product_page_logic(){
   const tab = document.querySelector('#productModule');
   const page = document.querySelector('.pc-product-page');
   const header = document.querySelector('.headerNav');
@@ -58,7 +64,7 @@ function show_product_page(){
   })
 }
 
-function moveUpShowHeader(){
+function header_scroll_logic(){
   let prevScrollPos = window.pageYOffset;
   window.addEventListener('scroll', () => {
     // hide product page whenever scroll
@@ -78,7 +84,7 @@ function moveUpShowHeader(){
   });
 }
 
-function headerTurnWhite(){
+function header_color_logic(){
   window.addEventListener('scroll', function() {
     let header = document.querySelector('.headerNav');
     let distance = window.pageYOffset || document.documentElement.scrollTop;
@@ -92,9 +98,6 @@ function headerTurnWhite(){
     }
   });
 }
-
-
-
 
 /* Digital Block Logic */
 // ------------------------------------------------------------------------
@@ -290,6 +293,8 @@ function listen_qrHover(textLink, qrImg){
   })
 }
 
+/* Banner Section Logic */
+// ------------------------------------------------------------------------
 function initBannerSection(){
   jump();
 }
