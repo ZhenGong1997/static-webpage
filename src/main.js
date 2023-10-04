@@ -2,13 +2,70 @@ function initHeader(){
   moveUpShowHeader();
   // Header turns white when exceeds scrolling down 80px
   headerTurnWhite();
+
+  const textLink1 = document.querySelector('.pc-product-page #product_youshi');
+  const textLink2 = document.querySelector('.pc-product-page #product_shouyucidian');
+  const qrImg1 = document.querySelector('.pc-product-page #product_youshi_qr');
+  const qrImg2 = document.querySelector('.pc-product-page #product_shouyucidian_qr');
+  listen_qrHover(textLink1, qrImg1);
+  listen_qrHover(textLink2, qrImg2);
+
+  show_product_page();
+  load_header_state();
+}
+
+function hide_product_page(){
+  const page = document.querySelector('.pc-product-page');
+  page.style.display ='none';
+}
+
+// prevent bug: lose header color after loading
+function load_header_state(){
+  window.addEventListener('load', ()=>{
+    let distanceFromTop = window.scrollY;
+    const header = document.querySelector('.headerNav')
+    if (distanceFromTop > 80) {
+      header.style.backgroundColor = '#fff';
+    } else {
+      header.style.backgroundColor = 'transparent';
+    }
+  })
+}
+
+function show_product_page(){
+  const tab = document.querySelector('#productModule');
+  const page = document.querySelector('.pc-product-page');
+  const header = document.querySelector('.headerNav');
+  tab.addEventListener('mouseenter',()=>{
+    page.style.display = 'block';
+    header.style.backgroundColor = '#fff';
+  })
+  tab.addEventListener('mouseleave',()=>{
+    page.style.display = 'none';
+  })
+  page.addEventListener('mouseenter',()=>{
+    page.style.display = 'block';
+  })
+  page.addEventListener('mouseleave',()=>{
+    page.style.display = 'none';
+    const header = document.querySelector('.headerNav');
+    let distanceFromTop = window.scrollY;
+    if (distanceFromTop > 80) {
+      header.style.backgroundColor = '#fff';
+    } else {
+      header.style.backgroundColor = 'transparent';
+    }
+  })
 }
 
 function moveUpShowHeader(){
   let prevScrollPos = window.pageYOffset;
   window.addEventListener('scroll', () => {
+    // hide product page whenever scroll
+    hide_product_page();
     let currentScrollPos = window.pageYOffset;
     let header = document.querySelector('.headerNav');
+
 
     if (prevScrollPos > currentScrollPos) {
       header.classList.add('header_show');
@@ -47,6 +104,7 @@ function initDigitalSection(){
   const afters = document.querySelectorAll('.menu .after');
   initDigitalMenu(menus, afters);
   initDigitalItems(items);
+  popup();
   listenDigitalSection(menus, afters, items);
 }
 
@@ -72,6 +130,36 @@ function setActiveDigitalMenu(menu, flag){
     menu.style.color = '#51565d';
     menu.style.background ='linear-gradient(90deg,#eef4ff 4.15%,#f8faff)';
   }
+}
+
+function popup(){
+  const btns = document.querySelectorAll('.digital .textBlock .btn');
+  const pops = document.querySelectorAll('.digital .pop_content');
+  btns.forEach((btn, index) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+    })
+
+    btn.addEventListener('mouseover', () => {
+      btn.style.color = '#719bff';
+      pops[index].style.display = 'block';
+    })  
+
+    btn.addEventListener('mouseleave', () => {
+      btn.style.color = '#1977fe';
+      pops[index].style.display = 'none';
+    }) 
+  })
+
+  pops.forEach(pop => {
+    pop.addEventListener('mouseenter',() => {
+      pop.style.display = 'block';
+    })
+  
+    pop.addEventListener('mouseleave',() => {
+      pop.style.display = 'none';
+    })
+  })
 }
 
 function listenDigitalSection(menus, afters, items){
@@ -156,9 +244,69 @@ function listenProductSection(productMenus, productBlocks){
     })
   });
 }
+
+/* Partner Section Logic */
 // ------------------------------------------------------------------------
+function initPartnerSection(){
+  const contents = document.querySelectorAll('.partner .wrap .cont');
+  listenPartnerSection(contents);
+}
+
+function listenPartnerSection(contents){
+  contents.forEach((item) => {
+    item.addEventListener('mouseover',() => {
+      item.style.animationPlayState = 'paused';
+    })
+    item.addEventListener('mouseout',() => {
+      item.style.animationPlayState = 'running';
+    })
+  })
+}
+
+function initFooter(){
+  const textLink1 = document.querySelector('.footerContainer #youshi');
+  const textLink2 = document.querySelector('.footerContainer #shouyucidian');
+  const qrImg1 = document.querySelector('.footerContainer #youshi_qr');
+  const qrImg2 = document.querySelector('.footerContainer #shouyucidian_qr');
+  listen_qrHover(textLink1, qrImg1);
+  listen_qrHover(textLink2, qrImg2);
+}
+
+function listen_qrHover(textLink, qrImg){
+  textLink.addEventListener('mouseenter', () => {
+    qrImg.style.display ='block';
+  })
+
+  textLink.addEventListener('mouseleave', () => {
+    qrImg.style.display ='none';
+  })
+
+  qrImg.addEventListener('mouseenter', () => {
+    qrImg.style.display ='block';
+  })
+
+  qrImg.addEventListener('mouseleave', () => {
+    qrImg.style.display ='none';
+  })
+}
+
+function initBannerSection(){
+  jump();
+}
+
+function jump(){
+  const next = document.querySelector('#next');
+  const target = document.querySelector('#next_target');
+  next.addEventListener('click', (e) => {
+    e.preventDefault();
+    target.scrollIntoView({behavior:'smooth'});
+  })
+}
 
 initHeader();
+initBannerSection();
 initDigitalSection();
 initProductSection();
+initPartnerSection();
+initFooter();
 

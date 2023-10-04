@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="aminer.css">
     <link rel="stylesheet" href="digital.css">
     <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="partner.css">
+    <link rel="stylesheet" href="news.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="animation.css">
 </head>
 
 <body>
@@ -71,7 +75,7 @@
                 </div>
 
             </div>
-            <div class="next">
+            <div class="next" id="next">
                 <svg class="icon">
                     <use xlink:href="#icon-xiajiantou"></use>
                 </svg>
@@ -81,7 +85,7 @@
             <img src="imgs/sphere.png" class="circle" alt="">
         </div>
 
-        <div class="chatGLM">
+        <div class="chatGLM" id="next_target">
             <div class="wrapper">
                 <div class="top">
                     <div class="title"><span>大模型MaaS平台</span></div>
@@ -141,7 +145,7 @@
                     </div>
                 </div>
                 <div class="list">
-                    <div class="item1">
+                    <div class="item" id="item1">
                         <div class="logo"><img src="imgs/chatglm_logo1.png" alt=""></div>
                         <div class="card">
                             <div class="cardTitle">ChatGLM-6B</div>
@@ -155,7 +159,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item2">
+                    <div class="item" id="item2">
                         <div class="logo"><img src="imgs/CodeGeeX-logo2.png" alt=""></div>
                         <div class="card">
                             <div class="cardTitle">CodeGeeX</div>
@@ -169,7 +173,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item3">
+                    <div class="item" id="item3">
                         <div class="logo"><img src="imgs/CogView-logo3.png" alt=""></div>
                         <div class="card">
                             <div class="cardTitle">CogView</div>
@@ -341,11 +345,27 @@
                         <div class="textBlockTitle">形象生成及驱动</div>
                         <div class="textBlockDesc">
                             快速生成2D、3D、卡通数字人形象，首创AI情感驱动并支持驱动模式，更广泛地适配各种驱动硬件或软件深度学习算法，融合口型、表情等人物特征，让数字人更加智能亲近。</div>
-                        <a class="btn" href="">了解更多&nbsp;
-                            <svg class="icon">
-                                <use xlink:href="#icon-jiantouxie"></use>
-                            </svg>
-                        </a>
+                        <div class="btn_wrap">
+                            <a class="btn" href="!#">了解更多&nbsp;
+                                <svg class="icon">
+                                    <use xlink:href="#icon-jiantouxie"></use>
+                                </svg>
+
+                            </a>
+
+                            <div class="pop_content">
+                                <div class="pop_inner">
+                                    <div class="content">
+                                        <div class="message">
+                                            <div class="modalImg">
+                                                <img src="imgs/youshi.jpg" alt="">
+                                            </div>
+                                            <div class="tip">扫码关注了解更多</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="videoBlock">
                         <video muted loop autoplay>
@@ -358,10 +378,29 @@
                         <div class="textBlockTitle">数字人交互</div>
                         <div class="textBlockDesc">综合MetaGC和大模型AIGC能力，神形兼备的解决方案让数字人更加多元化地服务于各种特定场景，形成娱乐与功能一体的综合解决方案。
                         </div>
-                        <a class="btn" href="">了解更多&nbsp;
-                            <svg class="icon">
-                                <use xlink:href="#icon-jiantouxie"></use>
-                            </svg></a>
+                        <div class="btn_wrap">
+                            <a class="btn" href="!#">了解更多&nbsp;
+                                <svg class="icon">
+                                    <use xlink:href="#icon-jiantouxie"></use>
+                                </svg>
+
+                            </a>
+
+                            <div class="pop_content">
+                                <div class="pop_inner">
+                                    <div class="content">
+                                        <div class="message">
+                                            <div class="modalImg">
+                                                <img src="imgs/youshi.jpg" alt="">
+                                            </div>
+                                            <div class="tip">扫码关注了解更多</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
                     <div class="videoBlock">
                         <video muted loop autoplay>
@@ -374,11 +413,27 @@
                         <div class="textBlockTitle">人工智能数字脑</div>
                         <div class="textBlockDesc">
                             基于大模型、NLG、NLU等能力，加强实现语言、语义理解及内容生成的多种应用；支持长文本转短文本、长文本撰写、智能问答、短文本交流等AIGC算法。</div>
-                        <a class="btn" href="">了解更多&nbsp;
-                            <svg class="icon">
-                                <use xlink:href="#icon-jiantouxie"></use>
-                            </svg>
-                        </a>
+                        <div class="btn_wrap">
+                            <a class="btn" href="!#">了解更多&nbsp;
+                                <svg class="icon">
+                                    <use xlink:href="#icon-jiantouxie"></use>
+                                </svg>
+
+                            </a>
+
+                            <div class="pop_content">
+                                <div class="pop_inner">
+                                    <div class="content">
+                                        <div class="message">
+                                            <div class="modalImg">
+                                                <img src="imgs/youshi.jpg" alt="">
+                                            </div>
+                                            <div class="tip">扫码关注了解更多</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="videoBlock">
                         <video muted loop autoplay>
@@ -390,11 +445,27 @@
                     <div class="textBlock">
                         <div class="textBlockTitle">海量专业知识</div>
                         <div class="textBlockDesc">融合千万级实体的大规模知识图谱和各行业相关专业知识，支持为数字人配置专属的行业知识和能力，实现更加专业精准的服务能力。</div>
-                        <a class="btn" href="">了解更多&nbsp;
-                            <svg class="icon">
-                                <use xlink:href="#icon-jiantouxie"></use>
-                            </svg>
-                        </a>
+                        <div class="btn_wrap">
+                            <a class="btn" href="!#">了解更多&nbsp;
+                                <svg class="icon">
+                                    <use xlink:href="#icon-jiantouxie"></use>
+                                </svg>
+
+                            </a>
+
+                            <div class="pop_content">
+                                <div class="pop_inner">
+                                    <div class="content">
+                                        <div class="message">
+                                            <div class="modalImg">
+                                                <img src="imgs/youshi.jpg" alt="">
+                                            </div>
+                                            <div class="tip">扫码关注了解更多</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="videoBlock">
                         <video muted loop autoplay>
@@ -485,7 +556,7 @@
                             <div class="title">CogView</div>
                             <div class="desc">输入文字描述，AI帮你作画</div>
                         </div>
-                    </div>            
+                    </div>
                 </div>
                 <div class="block">
                     <div class="blockItem">
@@ -541,7 +612,7 @@
                             <div class="title">若邻画像</div>
                             <div class="desc">为期刊编辑部建立全球视野下的“期刊朋友圈”</div>
                         </div>
-                    </div>            
+                    </div>
                 </div>
                 <div class="block">
                     <div class="blockItem">
@@ -570,15 +641,304 @@
                             <div class="title">手语词典</div>
                             <div class="desc">用数字人呈现手语词汇数字人视频</div>
                         </div>
-                    </div>      
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="partner">
+            <div class="top">
+                <div class="title">
+                    全球知名机构及企业的信任与选择
+                </div>
+                <div class="desc">
+                    69个国家，1000+个研究机构，数万家先锋合作企业，正在与我们共建人工智能的美好未来
+                </div>
+            </div>
+            <div class="partnerImg">
+                <div class="wrap">
+                    <div class="cont">
+                        <img src="imgs/partner1.png" alt="">
+                        <img src="imgs/partner1.png" alt="">
+                    </div>
+                </div>
+                <div class="wrap">
+                    <div class="cont">
+                        <img src="imgs/partner2.png" alt="">
+                        <img src="imgs/partner2.png" alt="">
+                    </div>
+                </div>
+                <div class="wrap">
+                    <div class="cont">
+                        <img src="imgs/partner3.png" alt="">
+                        <img src="imgs/partner3.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="news">
+            <div class="newsHeader">
+                <div class="title">
+                    新闻与资讯
+                </div>
+                <a href="https://www.zhipuai.cn/news/" class="more">
+                    查看更多文章↗
+                </a>
+            </div>
+            <div class="newsListContainer">
+                <div class="newsList">
+                    <div class="singleNews">
+                        <img src="imgs/news1.jpeg" alt="">
+                        <div class="detail">
+                            <div class="tip">技术前沿</div>
+                            <div class="tip">产品动态</div>
+                            <div class="title">代码模型 CodeGeeX2-6B 开源，最低6GB显存，性能优于StarCoder</div>
+                            <div class="time"><svg class="icon">
+                                    <use xlink:href="#icon-clock"></use>
+                                </svg>2023-07-25</div>
+
+                        </div>
+                    </div>
+                    <div class="singleNews">
+                        <img src="imgs/news2.jpeg" alt="">
+                        <div class="detail">
+                            <div class="tip">技术前沿</div>
+                            <div class="tip">产品动态</div>
+                            <div class="title">ChatGLM2-6B，免费商用</div>
+                            <div class="time"><svg class="icon">
+                                    <use xlink:href="#icon-clock"></use>
+                                </svg>2023-07-14</div>
+
+                        </div>
+                    </div>
+                    <div class="singleNews">
+                        <img src="imgs/news3.png" alt="">
+                        <div class="detail">
+                            <div class="tip">技术前沿</div>
+                            <div class="tip">产品动态</div>
+                            <div class="title">ChatGLM2-6B：性能大幅提升，8-32k上下文，推理提速42%</div>
+                            <div class="time"><svg class="icon">
+                                    <use xlink:href="#icon-clock"></use>
+                                </svg>2023-06-25</div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="footerContainer">
+        <div class="footerTop">
+            <div class="title">认知大模型引领AI产业革新</div>
+            <a href="https://www.zhipuai.cn/consult" class="appointLink" target="_blank">预约专家交流</a>
+        </div>
+        <div class="footerBox">
+            <div class="left">
+                <img src="imgs/footer-logo.png" alt="">
+            </div>
+            <div class="middle">
+                <div class="top">
+                    <div class="productList">
+                        <p class="footerTitle">大模型列表</p>
+                        <div class="productListItem">
+                            <a href="" target="_blank">ChatGLM-130B</a>
+                            <a href="" target="_blank">ChatGLM-6B</a>
+                            <a href="" target="_blank">GLM-130B</a>
+                            <a href="" target="_blank">CodeGeeX</a>
+                            <a href="" target="_blank">CogView</a>
+                            <a href="" target="_blank">CogVideo</a>
+                        </div>
+                    </div>
 
-    <script async="" src="//at.alicdn.com/t/c/font_4009508_jptiugy0x5l.js"></script>
-    <script src="//at.alicdn.com/t/c/font_4266712_dne6bqb6rxf.js"></script>
+                    <div class="productList">
+                        <p class="footerTitle">大模型产品</p>
+                        <div class="productListItem">
+                            <a href="https://bigmodel.ai/" target="_blank">AI开放平台</a>
+                            <a href="https://chatglm.cn/" target="_blank">ChatGLM</a>
+                            <a href="https://codegeex.cn/" target="_blank">CodeGeeX</a>
+                            <a href="https://littlefrog.ai/" target="_blank">写作蛙</a>
+                            <a href="https://xdai.ai/" target="_blank">小呆对话</a>
+                            <a href="https://cogview.ai/" target="_blank">CogView</a>
+                        </div>
+                    </div>
+                    <div class="productList">
+                        <p class="footerTitle">AMiner产品</p>
+                        <div class="productListItem">
+                            <a href="https://www.aminer.cn/" target="_blank">AMiner</a>
+                            <a href="https://vip.aminer.cn/talent/index/" target="_blank">塔尖人才</a>
+                            <a href="https://vip.aminer.cn/analysis/" target="_blank">知因分析</a>
+                            <a href="https://vip.aminer.cn/sign/xiaoke/" target="_blank">小科问答</a>
+                            <a href="https://vip.aminer.cn/reco/" target="_blank">至远推送</a>
+                            <a href="https://vip.aminer.cn/friend/" target="_blank">若邻画像</a>
+                        </div>
+                    </div>
+
+                    <div class="productList">
+                        <p class="footerTitle">数字人产品</p>
+                        <div class="productListItem">
+                            <a href="#!" target=""> <span id="youshi">有时</span>
+                                <img src="imgs/youshi_qr.jpeg" id="youshi_qr" alt="">
+                            </a>
+                            <a href="https://vip.aminer.cn/sign/" target="_blank">智慧手语</a>
+                            <a href="#!" target=""> <span id="shouyucidian">手语词典</span>
+                                <img src="imgs/shouyucidian_qr.png" id="shouyucidian_qr" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right">
+                <p class="footerTitle">联系方式</p>
+                <p class="cooperate">商务合作：service@zhipuai.cn</p>
+                <p class="company">公司地址：北京市海淀区中关村东路1号院9号楼10层</p>
+                <div class="qrcode-list">
+                    <div class="qrcode">
+                        <img class="qrcode-img" src="imgs/qiweikefu.png" alt="智谱AI">
+                        <p class="desc">企微客服</p>
+                    </div>
+                    <div class="qrcode">
+                        <img class="qrcode-img" src="imgs/zhipugongzhonghao.png" alt="智谱AI">
+                        <p class="desc">智谱公众号</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">Copyright © 2023 北京智谱华章科技有限公司</p>
+            <a class="beian" href="https://beian.miit.gov.cn/" target="_blank">京ICP备20011824号-24 </a>
+        </div>
+    </div>
+
+    <div class="pc-product-page">
+        <div class="product-innerbox">
+            <div class="product-list">
+                <p class="title">大模型产品</p>
+                <div class="product-list-item-outbox">
+                    <a href="https://bigmodel.ai" target="_blank" class="product-list-item"><img class="product-img"
+                            src="imgs/products/open.png" alt="智谱AI">
+                        <div class="right">
+                            <h3 class="name">AI开放平台</h3>
+                            <p class="desc">领先的认知大模型AI开放平台
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </p>
+                        </div>
+                    </a>
+                    <a href="https://chatglm.cn" target="_blank" class="product-list-item">
+                        <img class="product-img" src="imgs/products/chatglm.png" alt="智谱AI">
+                        <div class="right">
+                            <h3 class="name">ChatGLM</h3>
+                            <p class="desc">中英双语千亿对话模型
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </p>
+                        </div>
+                    </a><a href="https://codegeex.cn" target="_blank" class="product-list-item"><img class="product-img"
+                            src="imgs/products/cogegeex.png" alt="智谱AI">
+                        <div class="right">
+                            <h3 class="name">CodeGeeX</h3>
+                            <p class="desc">免费的AI编程助手，每天帮程序员编写400万行代码</p>
+                        </div>
+                    </a><a href="https://littlefrog.ai" target="_blank" class="product-list-item"><img
+                            class="product-img" src="imgs/products/xiezuowa.png" alt="智谱AI">
+                        <div class="right">
+                            <h3 class="name">写作蛙</h3>
+                            <p class="desc">快速生成AI原创的高质量内容创意</p>
+                        </div>
+                    </a><a href="https://xdai.ai/" target="_blank" class="product-list-item"><img class="product-img"
+                            src="imgs/products/xiaodai.png" alt="智谱AI">
+                        <div class="right">
+                            <h3 class="name">小呆对话</h3>
+                            <p class="desc">支持定制人设的个性化对话模型</p>
+                        </div>
+                    </a><a href="https://cogview.ai/" target="_blank" class="product-list-item"><img class="product-img"
+                            src="imgs/products/cogview.png" alt="智谱AI">
+                        <div class="right">
+                            <h3 class="name">CogView</h3>
+                            <p class="desc">输入文字描述，AI帮你作画</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="product-list">
+                <p class="title">AMiner产品</p>
+                <div class="product-list-item-outbox"><a href="https://www.aminer.cn/" target="_blank"
+                        class="product-list-item"><img class="product-img" src="imgs/products/aminer.png" alt="智谱AI">
+                        <div class="right">
+                            <h3 class="name">AMiner</h3>
+                            <p class="desc">领先的学术科技情报大数据挖掘与服务系统</p>
+                        </div>
+                    </a><a href="https://vip.aminer.cn/talent/index/" target="_blank" class="product-list-item"><img
+                            class="product-img" src="imgs/products/tajianrencai.png" alt="智谱AI">
+                        <div class="right">
+                            <h3 class="name">塔尖人才</h3>
+                            <p class="desc">基于1.3亿全球科技人才大数据及AI技术赋能机构人才事业</p>
+                        </div>
+                    </a><a href="https://vip.aminer.cn/analysis/" target="_blank" class="product-list-item"><img
+                            class="product-img" src="imgs/products/zhiyinfenxi.png" alt="智谱AI">
+                        <div class="right">
+                            <h3 class="name">知因分析</h3>
+                            <p class="desc">基于科技知识图谱的科技大数据智能分析系统
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                        </div>
+                    </a><a href="https://vip.aminer.cn/sign/xiaoke/" target="_blank" class="product-list-item"><img
+                            class="product-img" src="imgs/products/xiaokewenda.png" alt="智谱AI">
+                        <div class="right">
+                            <h3 class="name">小科问答</h3>
+                            <p class="desc">数据与知识双轮驱动的“科普数字脑”系统</p>
+                        </div>
+                    </a><a href="https://vip.aminer.cn/reco/" target="_blank" class="product-list-item"><img
+                            class="product-img" src="imgs/products/zhiyuantuisong.png" alt="智谱AI">
+                        <div class="right">
+                            <h3 class="name">至远推送</h3>
+                            <p class="desc">应用AI分析技术，提升文献传播的及时性及有效性</p>
+                        </div>
+                    </a><a href="https://vip.aminer.cn/friend/" target="_blank" class="product-list-item"><img
+                            class="product-img" src="imgs/products/ruolinghuaxiang.png" alt="智谱AI">
+                        <div class="right">
+                            <h3 class="name">若邻画像</h3>
+                            <p class="desc">为期刊编辑部建立全球视野下的“期刊朋友圈”</p>
+                        </div>
+                    </a></div>
+            </div>
+            <div class="product-list">
+                <p class="title">数字人产品</p>
+                <div class="product-list-item-outbox">
+                    <a href="#!" target="" class="product-list-item" id="product_youshi"><img class="product-img"
+                            src="imgs/products/youshi.png" alt="智谱AI">
+                        <div class="right">
+                            <h3 class="name">有时</h3>
+                            <p class="desc">面向高校毕业生的求职能力提升平台
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </p>
+                        </div><img class="qrcode" id="product_youshi_qr" src="imgs/youshi_qr.jpeg">
+                    </a>
+                    <a href="https://vip.aminer.cn/sign/" target="_blank" class="product-list-item"><img
+                            class="product-img" src="imgs/products/zhihuishouyu.png" alt="智谱AI">
+                        <div class="right">
+                            <h3 class="name">智慧手语</h3>
+                            <p class="desc">高逼真手语播报数字人生成模型
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#!" target="" class="product-list-item" id="product_shouyucidian"><img class="product-img"
+                            src="imgs/products/shouyucidian.png" alt="智谱AI">
+                        <div class="right">
+                            <h3 class="name">手语词典</h3>
+                            <p class="desc">用数字人表达的国家通用手语词查询工具</p>
+                        </div><img class="qrcode" id="product_shouyucidian_qr" src="imgs/shouyucidian_qr.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- origin -->
+    <script src="//at.alicdn.com/t/c/font_4009508_jptiugy0x5l.js"></script>
+    <!-- new -->
+    <script src="//at.alicdn.com/t/c/font_4266712_9vseo24hade.js"></script>
     <script src="main.js"></script>
 </body>
 

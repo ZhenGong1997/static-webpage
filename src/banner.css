@@ -116,31 +116,14 @@
     height: auto;
     width: 320px;
     right: -200px;
-    animation: slide 8s linear 0s infinite alternate;
+    animation: circleSlide 8s linear 0s infinite alternate;
 }
 
 .banner img{
     vertical-align: middle;
 }
 
-@keyframes slide{
-    0%{
-        top:21%;
-        right:-210px;
-    }
-    25%{
-        top:20%;
-        right:-200px;
-    }
-    50%{
-        top:19%;
-        right:-210px;
-    }
-    100%{
-        top:21%;
-        right:-200px;
-    }
-}
+
 .banner .next{
     position:absolute;
     bottom:70px;
@@ -161,12 +144,3 @@
     animation:arrow_animate .6s infinite alternate;
 }
 
-@keyframes arrow_animate{
-    0% {
-        transform:translateY(0);
-    }
-
-    100% {
-        transform:translateY(20px);
-    }
-}

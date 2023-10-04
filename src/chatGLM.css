@@ -39,7 +39,7 @@
     letter-spacing: -.28px;
 }
 
-.wrapper .box{
+.chatGLM .wrapper .box{
     display: flex;
     width: 100%;
     height: -webkit-fit-content;
@@ -51,7 +51,7 @@
     border-radius: 12px;
 }
 
-.wrapper .box .left{
+.chatGLM .wrapper .box .left{
     flex: 1 1;
     margin-right: 49px;
     display: flex;
@@ -64,21 +64,13 @@
     animation-name: fadeIn;
 }
 
-@keyframes fadeIn{
-    0%{
-        opacity:0;
-    }
 
-    100%{
-        opacity:1;
-    }
-}
 
-.left .image img{
+.chatGLM .left .image img{
     height:45px;
 }
 
-.left .title{
+.chatGLM .left .title{
     font-family: "Roboto";
     font-weight: 500;
     color: #131212;
@@ -87,7 +79,7 @@
     margin-top: 10px;
 }
 
-.left .desc{
+.chatGLM .left .desc{
     font-family: "Open Sans";
     font-weight: 400;
     color: rgba(10,10,10,.8);
@@ -96,13 +88,13 @@
     margin-top: 12px;
 }
 
-.left .link{
+.chatGLM .left .link{
     display: flex;
     margin-top: 24px;
 
 }
 
-.left .link .btn1{
+.chatGLM .left .link .btn1{
     height: 36px;
     border-radius: 18px;
     font-size: 13px;
@@ -114,7 +106,7 @@
     transition: all .1s ease-in-out;
 }
 
-.left .link .btn1:hover{
+.chatGLM .left .link .btn1:hover{
     background-color: #0061ed;
 }
 
@@ -128,17 +120,9 @@
     animation-name:slideInRight;
 }
 
-@keyframes slideInRight{
-    0% {
-        opacity: 0;
-        transform: translateX(2000px);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
 
-.right .rightBlock{
+
+.chatGLM .right .rightBlock{
     flex: 1 1;
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -152,7 +136,7 @@
     overflow: hidden;
 }
 
-.right .rightHeader{
+.chatGLM .right .rightHeader{
     display: flex;
     width: 100%;
     align-items: center;
@@ -161,7 +145,7 @@
     background: linear-gradient(90deg,#1977fe,#d3e5ff);
 }
 
-.right .rightHeader .dot{
+.chatGLM .right .rightHeader .dot{
     width: 7px;
     height: 7px;
     margin-right: 6px;
@@ -169,16 +153,16 @@
     border-radius: 50%;
 }
 
-.right .rightBottom{
+.chatGLM .right .rightBottom{
     position: relative;
     padding: 25px 40px;
 }
 
-.rightBottom .question, .answer{
+.chatGLM .rightBottom .question, .answer{
     display:flex;
 }
 
-.question .q_image, .answer .a_image{
+.chatGLM .question .q_image, .answer .a_image{
     display: inline-block;
     vertical-align: middle;
     text-align: center;
@@ -192,10 +176,10 @@
     background: #64b7af;
 }
 
-.answer{
+.chatGLM .answer{
     margin-top: 18px;
 }
-.answer .a_image{
+.chatGLM .answer .a_image{
     background:#fff;
 }
 
@@ -207,18 +191,18 @@
     overflow: hidden;
 }
 
-.question .q_text, .answer .a_text{
+.chatGLM .question .q_text, .answer .a_text{
     font-size: 12px;
     line-height: 20px;
     color: #5e5e66;
 }
 
-.answer .a_text p{
+.chatGLM .answer .a_text p{
     margin-top: 0;
     margin-bottom: 1em;
 }
 
-.answer .a_text p .lineBlink{
+.chatGLM .answer .a_text p .lineBlink{
     display: inline-block;
     width: 8px;
     height: 12px;
@@ -228,16 +212,9 @@
     vertical-align: middle;
 }
 
-@keyframes  showInfinite{
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
 
-.rightBottom .thumbs{
+
+.chatGLM .rightBottom .thumbs{
     display: flex;
     justify-content: end;
     font-size: 15px;
@@ -261,7 +238,7 @@
     margin-top: 24px;
 }
 
-.item1,.item2,.item3{
+.chatGLM .item{
     position: relative;
     width: 384px;
     height: 240px;
@@ -273,17 +250,23 @@
     background-size: cover;
 }
 
-.item1{
+.chatGLM .item:hover{
+    height: 260px;
+    background: linear-gradient(180deg,#336bfb,#7399fb);
+    transition: all .2s cubic-bezier(.87,0,.13,1) .1s;
+}
+
+.chatGLM #item1{
     background: url(imgs/1.png) no-repeat;
 }
-.item2{
+.chatGLM #item2{
     background: url(imgs/2.png) no-repeat;
 }
-.item3{
+.chatGLM #item3{
     background: url(imgs/3.png) no-repeat;
 }
 
-.item1 .logo,.item2 .logo,.item3 .logo{
+.chatGLM .item .logo{
     position: absolute;
     height: 48px;
     top: 15px;
@@ -292,7 +275,7 @@
     margin-bottom: 21px;
 }
 
-.item1 .logo>img,.item2 .logo>img, .item3 .logo>img{
+.chatGLM .item .logo>img{
     height:100%;
     vertical-align: middle;
     border-style: none;
