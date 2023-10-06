@@ -308,8 +308,31 @@ function jump(){
   })
 }
 
+/* chatGLM Section Logic */
+function initChatGLMSection(){
+  chatGLM_item_hover();
+  btn1_click();
+}
+
+function btn1_click(){
+  const btn1 = document.querySelector('.chatGLM .btn1');
+  btn1.addEventListener('click', () => {
+    window.open('https://chatglm.cn/');
+  })
+}
+
+function chatGLM_item_hover(){
+  // const item1 = document.querySelector('.list #item1');
+  // console.log(item1)
+  // item1.addEventListener('mouseover', () => {
+  //   const logo1 = document.querySelector('.list #logo1');
+  //   logo1.style.display = 'none';
+  // })
+}
+
 initHeader();
 initBannerSection();
+initChatGLMSection();
 initDigitalSection();
 initProductSection();
 initPartnerSection();

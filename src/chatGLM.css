@@ -104,6 +104,7 @@
     background-color: #1679ff;
     color: #fff;
     transition: all .1s ease-in-out;
+    cursor:pointer;
 }
 
 .chatGLM .left .link .btn1:hover{
@@ -250,15 +251,19 @@
     background-size: cover;
 }
 
-.chatGLM .item:hover{
-    height: 260px;
-    background: linear-gradient(180deg,#336bfb,#7399fb);
-    transition: all .2s cubic-bezier(.87,0,.13,1) .1s;
-}
+
 
 .chatGLM #item1{
     background: url(imgs/1.png) no-repeat;
 }
+
+/* .chatGLM #item1:hover{
+    height: 260px;
+    background: linear-gradient(180deg,#336bfb,#7399fb);
+    transition: all .2s cubic-bezier(.87,0,.13,1) .1s;
+    color:#fff;
+} */
+
 .chatGLM #item2{
     background: url(imgs/2.png) no-repeat;
 }

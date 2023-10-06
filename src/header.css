@@ -253,3 +253,21 @@ transform: translateY(-100%); /* 隐藏header */
     border-radius: 8px;
     transform:translate(-120%,-23%);
 }
+
+.pc-product-page #pageChatGLM::after{
+    position: absolute;
+    content: "Beta";
+    color: #fff;
+    background-color: #4082f5;
+    text-align: center;
+    left: 66px;
+    bottom: 3px;
+    width: 33px;
+    height: 16px;
+    line-height: 16px;
+    border-radius: 3px;
+}
+
+.pc-product-page #pageChatGLM{
+    position:relative;
+}
