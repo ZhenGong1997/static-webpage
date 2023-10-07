@@ -251,24 +251,42 @@
     background-size: cover;
 }
 
+.chatGLM .item:last-child{
+    margin-right: 0;
+}
+
 
 
 .chatGLM #item1{
     background: url(imgs/1.png) no-repeat;
 }
 
-/* .chatGLM #item1:hover{
+.chatGLM #item1:hover{
     height: 260px;
     background: linear-gradient(180deg,#336bfb,#7399fb);
     transition: all .2s cubic-bezier(.87,0,.13,1) .1s;
-    color:#fff;
-} */
+}
+
+
 
 .chatGLM #item2{
     background: url(imgs/2.png) no-repeat;
 }
+
+.chatGLM #item2:hover{
+    height: 260px;
+    background: linear-gradient(180deg,#00a7dc,#00cbe4);
+    transition: all .2s cubic-bezier(.87,0,.13,1) .1s;
+}
+
 .chatGLM #item3{
     background: url(imgs/3.png) no-repeat;
+}
+
+.chatGLM #item3:hover{
+    height: 260px;
+    background: linear-gradient(180deg,#633cc6 13%,#9072de);
+    transition: all .2s cubic-bezier(.87,0,.13,1) .1s;
 }
 
 .chatGLM .item .logo{
@@ -322,9 +340,18 @@
     cursor: pointer;
     font-size: 22px;
     margin-top: 23px;
-    /* color: #506c8e; */
 }
 
+.chatGLM .cardLink .linkHover{
+    position:absolute;
+    left:0;
+    top:120px;
+    padding:30px;
+    display:none;
+    font-size:16px;
+    color:#fff;
+    margin-top:23px;
+}
 .chatGLM .cardLink .icon{
     width: 1.2em;
     height: 1.2em;

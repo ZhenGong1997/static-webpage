@@ -39,6 +39,10 @@
     background: #1977fe;
 }
 
+.footerContainer .footerTop .appointLink:hover{
+    background:#0061ed;
+}
+
 .footerContainer .footerBox{
     margin: 0 auto;
     padding-top: 84px;

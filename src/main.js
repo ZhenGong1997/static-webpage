@@ -319,20 +319,92 @@ function btn1_click(){
   btn1.addEventListener('click', () => {
     window.open('https://chatglm.cn/');
   })
-}
+} 
 
 function chatGLM_item_hover(){
-  // const item1 = document.querySelector('.list #item1');
-  // console.log(item1)
-  // item1.addEventListener('mouseover', () => {
-  //   const logo1 = document.querySelector('.list #logo1');
-  //   logo1.style.display = 'none';
-  // })
+  const items = document.querySelectorAll('.list .item');
+  const cardTitles = document.querySelectorAll('.chatGLM .list .cardTitle');
+  const cardDescs = document.querySelectorAll('.chatGLM .list .cardDesc');
+  const logos = document.querySelectorAll('.list .item .logo');
+  const cards = document.querySelectorAll('.list .item .card');
+  const arrows = document.querySelectorAll('.list .item .card .youjiantou2')
+  const linkHovers = document.querySelectorAll('.list .item .linkHover');
+  
+  items.forEach((item, index) => {
+    item.addEventListener('mouseover', () => {
+      cardTitles[index].style.color = '#fff';
+      cardDescs[index].style.color = '#fff';
+      cardDescs[index].style.overflow = 'visible';
+      cardDescs[index].style.marginTop = '16px';
+      logos[index].style.display = 'none';
+      cards[index].style.top = '30px';
+      arrows[index].style.display = 'none';
+      linkHovers[index].style.display = 'block';
+    })
+    item.addEventListener('mouseout', () => {
+      cardTitles[index].style.color = '#131212';
+      cardDescs[index].style.color = '#5e5e66';
+      cardDescs[index].style.overflow = 'hidden';
+      cardDescs[index].style.marginTop = '5px';
+      logos[index].style.display='block';
+      cards[index].style.top = '80px';
+      arrows[index].style.display = 'block';
+      linkHovers[index].style.display = 'none';
+    });
+  })
+}
+
+function initAminerSection(){
+  aminerHover();
+}
+
+function aminerHover(){
+  const cards = document.querySelectorAll('.aminer .card');
+  const images = document.querySelectorAll('.aminer .card .images');
+  const cardTitles = document.querySelectorAll('.aminer .card  .title');
+  const cardDescs = document.querySelectorAll('.aminer .card  .desc');
+  const arrows = document.querySelectorAll('.aminer .card .image');
+  const linkHovers = document.querySelectorAll('.aminer .card .linkHover');
+  const bottoms = document.querySelectorAll('.aminer .card .bottom');
+
+  cards.forEach((item, index) => {
+    item.addEventListener('mouseover', () => {
+      images[index].style.display = 'none';
+      cardTitles[index].style.color = '#fff';
+      cardDescs[index].style.color = '#fff';
+      cardDescs[index].style.overflow = 'visible';
+      cardDescs[index].style.height = '200px';
+      cardDescs[index].style.margin = '16px 0 20px';
+      arrows[index].style.display = 'none';
+      linkHovers[index].style.display = 'block';
+      bottoms[index].style.backgroundColor = 'background: linear-gradient(180deg,#633cc6 12.5%,#9072de)';
+      bottoms[index].style.border = 'none';
+      bottoms[index].style.top = '24px';
+      bottoms[index].style.height = 'auto';
+      bottoms[index].style.padding = '24px';
+    });
+
+    item.addEventListener('mouseleave', () => {
+      images[index].style.display = 'block';
+      cardTitles[index].style.color = '#131212';
+      cardDescs[index].style.color = '#5e5e65';
+      cardDescs[index].style.overflow = 'hidden';
+      cardDescs[index].style.height = '48px';
+      cardDescs[index].style.margin = '5px 0 20px';
+      arrows[index].style.display = 'block';
+      linkHovers[index].style.display = 'none';
+      bottoms[index].style.backgroundColor = 'none';
+      bottoms[index].style.border = '1px solid #eee';
+      bottoms[index].style.top = '200px';
+      bottoms[index].style.padding = '14px 24px';
+    });
+  })
 }
 
 initHeader();
 initBannerSection();
 initChatGLMSection();
+initAminerSection()
 initDigitalSection();
 initProductSection();
 initPartnerSection();
