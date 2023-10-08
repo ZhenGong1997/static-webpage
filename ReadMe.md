@@ -21,6 +21,7 @@ HTML, CSS, JavaScript
 1. 适配手机端页面
 2. 增加模块加载时动画
 3. 对重复出现的逻辑或代码块重构
+
 ## 如何本地运行和开发？
 macos localhost运行
 ```bash

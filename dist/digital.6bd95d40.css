@@ -1,0 +1,171 @@
+.digital{
+    height: fit-content;
+    margin: 0 auto;
+    width: 1200px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+.digital .top{
+    text-align: center;
+}
+
+.digital .list{
+    width: 100%;
+    height: 548px;
+    border-radius: 20px;
+    display: flex;
+    background: #f9fbff;
+    margin-top: 60px;
+    overflow: hidden;
+}
+
+.digital .list .menus{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    background: rgba(228,234,252,.5);
+    border-right: 5px solid #fff;
+}
+
+.digital .menus .menu{
+    position:relative;
+    width: 215px;
+    height: 137px;
+    line-height: 137px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #51565d;
+    cursor: pointer;
+    text-align: center;
+    transition: all .2s ease-in-out;
+    border-bottom: 1px solid #fff;
+    background: linear-gradient(90deg,#eef4ff 4.15%,#f8faff);
+}
+
+
+/* 有趣的设定 */
+.digital .list .menus .menu .after
+{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 8px solid #4d8af7;
+    border-top: 8px solid #fff;
+    border-bottom: 8px solid #fff;
+}
+
+.digital .activeItem{
+    flex: 1 1;
+    display: flex;
+    padding: 64px 40px;
+    height: 100%;
+}
+
+.digital .activeItem .textBlock{
+    flex: 1 1;
+}
+
+.digital .activeItem .videoBlock{
+    width: 360px;
+    height: 410px;
+    margin-left: 40px;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.digital .activeItem .videoBlock video{
+    width: 360px;
+    opacity: 1;
+    object-fit: cover;
+    height: 100%;
+    transition: all .2s ease-in-out;
+    border-radius: 12px;
+}
+
+.digital .activeItem .textBlock .textBlockTitle{
+    font-family: "Roboto";
+    font-weight: 400;
+    color: #0a0a0a;
+    font-size: 28px;
+    line-height: 44px;
+}
+
+.digital .activeItem .textBlock .textBlockDesc{
+    font-family: "Open Sans";
+    font-weight: 400;
+    color: #5e5e66;
+    font-size: 18px;
+    line-height: 36px;
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+
+.digital .textBlock .btn_wrap{
+    display:flex;
+}
+.digital .activeItem .textBlock .btn{
+    font-size: 16px;
+    line-height: 23px;
+    height:23px;
+    cursor: pointer;
+    color: #1977fe;
+    font-weight: 400;
+    transition: all .1s ease-in-out;
+}
+
+.pop_content{
+    display:none;
+    padding:10px;
+    transform:translateX(0px) translateY(-100px);
+}
+  
+.pop_content .pop_inner{
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px -4px rgba(0,0,0,.12), 0 6px 16px 0 rgba(0,0,0,.08), 0 9px 28px 8px rgba(0,0,0,.05);
+}
+
+.pop_content .content{
+    border-radius: 12px;
+    width: 240px;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: linear-gradient(180deg,rgba(25,119,254,.4),rgba(251,253,255,.4) 28.65%);
+} 
+
+.pop_content .tip{
+    height: 20px;
+    line-height: 20px;
+    font-size: 20px;
+    margin-top: 22px;
+    color: #3a4057;
+    text-align: center;
+}
+
+
+
+.pop_content .message .modalImg{
+    width: 120px;
+    height:120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0,0,0,.1);
+}
+
+/*# sourceMappingURL=digital.6bd95d40.css.map */

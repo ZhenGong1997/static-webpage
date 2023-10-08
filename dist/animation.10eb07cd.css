@@ -1,0 +1,61 @@
+/* banner */
+@keyframes circleSlide{
+    0%{
+        top:21%;
+        right:-210px;
+    }
+    25%{
+        top:20%;
+        right:-200px;
+    }
+    50%{
+        top:19%;
+        right:-210px;
+    }
+    100%{
+        top:21%;
+        right:-200px;
+    }
+}
+
+@keyframes arrow_animate{
+    0% {
+        transform:translateY(0);
+    }
+
+    100% {
+        transform:translateY(20px);
+    }
+}
+
+/* chatGLM */
+@keyframes fadeIn{
+    0%{
+        opacity:0;
+    }
+
+    100%{
+        opacity:1;
+    }
+}
+
+@keyframes slideInRight{
+    0% {
+        opacity: 0;
+        transform: translateX(2000px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes  showInfinite{
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/*# sourceMappingURL=animation.10eb07cd.css.map */

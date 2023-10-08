@@ -266,6 +266,8 @@ function listenPartnerSection(contents){
   })
 }
 
+/* Footer Section Logic */
+// ------------------------------------------------------------------------
 function initFooter(){
   const textLink1 = document.querySelector('.footerContainer #youshi');
   const textLink2 = document.querySelector('.footerContainer #shouyucidian');
@@ -354,6 +356,7 @@ function chatGLM_item_hover(){
   })
 }
 
+/* AminerSection Logic */
 function initAminerSection(){
   aminerHover();
 }
