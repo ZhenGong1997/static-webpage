@@ -1,5 +1,6 @@
 .footerContainer{
-    width: 100%;
+    width: 1200px;
+    margin: 0 auto;
     box-sizing: border-box;
     background: #f5f7fb;
     background-repeat: no-repeat;
@@ -100,12 +101,13 @@
 
 .footerBox .productListItem a img{
     display: none;
+    max-height:100px;
     position: absolute;
     left: 0;
     top: 50%;
     transform: translate(-100%,-50%);
     width: 100px;
-    height: 100px;
+    /* height: 100px; */
     border-radius: 8px;
 }
 
