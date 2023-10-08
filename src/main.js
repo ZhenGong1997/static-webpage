@@ -404,6 +404,14 @@ function aminerHover(){
   })
 }
 
+
+function mobilePrompt(){
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    // 用户正在使用移动设备，可以采取相应的措施
+    window.alert('手机端正在开发中，请用电脑设备访问，谢谢。')
+}
+
+}
 initHeader();
 initBannerSection();
 initChatGLMSection();
@@ -413,3 +421,4 @@ initProductSection();
 initPartnerSection();
 initFooter();
 
+mobilePrompt();
