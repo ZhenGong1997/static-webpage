@@ -2,6 +2,7 @@
 项目作者: Zhen Gong
 
 项目预览:[https://zhengong1997.github.io/static-webpage/dist/index.html](https://zhengong1997.github.io/static-webpage/dist/index.html)
+
 项目描述:通过使用HTML、CSS和JavaScript，我成功地复刻了[智谱AI官网](https://www.zhipuai.cn/)的主页PC端。该项目旨在练习我的前端开发技能和模仿能力，以便更好地理解现有网站的结构和设计。
 
 技术栈：
